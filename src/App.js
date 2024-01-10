@@ -8,6 +8,7 @@ import Home from "./pages/home";
 import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
 
 import "primereact/resources/themes/lara-light-cyan/theme.css";
+import "./App.css";
 
 function App() {
   return (

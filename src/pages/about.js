@@ -1,27 +1,33 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { Button } from "primereact/button";
-import { Card } from "primereact/card";
+import { width } from "@mui/system";
+import React, { useState, useEffect, useCallback, useRef } from "react";
+
 function About() {
-  const [counter, setCounter] = useState(0);
-  const handleCounter = useCallback(() => {
-    setCounter((prevCounter) => prevCounter + 1);
+  const [hours, setHours] = useState();
+  const [minutes, setMinutes] = useState();
+  const [seconds, setSeconds] = useState();
+
+  useEffect(() => {
+    let currentDate = new Date();
+    console.log(
+      `${currentDate.getHours()} : ${currentDate.getMinutes()} : ${
+        currentDate.getSeconds
+      }`,
+      "currentHours"
+    );
+    setHours(currentDate.getHours());
+    setMinutes(currentDate.getMinutes());
+    setSeconds(currentDate.getSeconds());
   }, []);
 
-  const handleSubtractCounter = useCallback(() => {
-    setCounter((prevCounter) => prevCounter - 1);
-  }, []);
   return (
     <div>
-      <Card title="Simple Card">
-        <p className="m-0">
-          <Button onClick={() => handleCounter()}>Add Counter</Button>
-          <Button onClick={() => handleSubtractCounter()}>
-            Subtract Counter
-          </Button>
-        </p>
-
-        {counter}
-      </Card>
+      <div>
+        {hours}:{minutes}:{seconds}
+      </div>
+      <div style={{ position: "absolute", top: "50%", left: "50%", transform }}>
+        <img src={`./Ellipse27.png`}></img>
+        <img src={`./Ellipse27.png`}></img>
+      </div>
     </div>
   );
 }

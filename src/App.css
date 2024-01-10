@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.center_screen {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.clock_circle {
+   width:150px;
+    height: 70px;
+    top:144px;
+    left:143px;
+    border-radius: 10px;
+
+}
