@@ -24,7 +24,7 @@ function About() {
       <div>
         {hours}:{minutes}:{seconds}
       </div>
-      <div style={{ position: "absolute", top: "50%", left: "50%", transform }}>
+      <div style={{ position: "absolute", top: "50%", left: "50%" }}>
         <img src={`./Ellipse27.png`}></img>
         <img src={`./Ellipse27.png`}></img>
       </div>
